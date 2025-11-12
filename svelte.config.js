@@ -10,15 +10,15 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: 'index.html',
+			precompress: false,
 			strict: false
 		}),
 		paths: {
-			base: dev ? '' : '',
-			relative: false
+			base: dev ? '' : process.env.BASE_PATH || ''
 		},
 		prerender: {
-			handleHttpError: 'warn',
-			entries: ['*']
+			entries: ['*'],
+			handleHttpError: 'warn'
 		}
 	},
 	preprocess: vitePreprocess()

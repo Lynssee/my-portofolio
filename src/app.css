@@ -1,0 +1,68 @@
+/* ============================================
+   src/app.css - FIXED VERSION
+   ============================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon: #c9f31d;
+  --dark: #0a0a0a;
+  --dark-secondary: #1a1a1a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--dark);
+    color: white;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-neon {
+    color: var(--neon);
+  }
+  
+  .bg-neon {
+    background-color: var(--neon);
+  }
+  
+  .bg-dark {
+    background-color: var(--dark);
+  }
+  
+  .bg-dark-secondary {
+    background-color: var(--dark-secondary);
+  }
+  
+  .border-neon {
+    border-color: var(--neon);
+  }
+  
+  .shadow-neon {
+    box-shadow: 0 0 20px rgba(201, 243, 29, 0.3);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5d610;
+}
